@@ -1,0 +1,335 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <!-- Essential SEO -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Tech Universe | Computers, Accessories & EMI Facility in [City]</title>
+  <meta name="description" content="Tech Universe is a one-stop tech shop for laptops, custom PCs, accessories, and fast device repairs in [City]. Visit us or order online for expert help and great prices.">
+  <link rel="canonical" href="https://www.example.com/">
+
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tech Universe | Your Local Tech Store">
+  <meta property="og:description" content="Laptops, custom PCs, accessories & repairs. Trusted tech experts in [City].">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image" content="https://www.example.com/static/og-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <!-- Preconnects (speed) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+  <!-- Fonts (swap to prevent CLS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- Minimal, inlined, mobile-first CSS (optimize CLS & speed) -->
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#111827; --muted:#94a3b8; --text:#e5e7eb; --accent:#22d3ee; --accent2:#60a5fa; --ok:#10b981; --warn:#f59e0b;
+      --max:1100px; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0b0f14 0%,#0f172a 100%);color:var(--text);line-height:1.6}
+    a{color:var(--accent)}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.7);backdrop-filter:saturate(1.2) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--text)}
+    .brand .logo{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:radial-gradient(circle at 30% 30%,var(--accent) 0, var(--accent2) 45%, #1f2937 75%);}
+    .brand b{font-weight:700;letter-spacing:.2px}
+    .menu{display:flex;gap:18px}
+    .menu a{color:var(--text);opacity:.86;text-decoration:none;font-weight:600}
+    .menu a:hover{opacity:1}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001018;border:0;padding:10px 14px;border-radius:10px;font-weight:700;box-shadow:0 6px 18px rgba(96,165,250,.25)}
+    main{display:block}
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 12px}
+    .sub{color:var(--muted);max-width:60ch;margin:0 0 18px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:6px 10px;color:#d1fae5;background:linear-gradient(180deg,rgba(16,185,129,.25),rgba(16,185,129,.05))}
+    .hero-card{background:rgba(17,24,39,.7);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:14px}
+    .hero-card img{width:100%;height:auto;border-radius:10px;display:block}
+    section{padding:42px 0}
+    h2{font-size:clamp(22px,3vw,30px);margin:0 0 12px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .card{background:rgba(17,24,39,.6);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:16px}
+    .card h3{margin:6px 0 8px;font-size:18px}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:4px 0}
+    .services .card span{font-size:12px;color:var(--muted)}
+    .products .item{display:flex;justify-content:space-between;gap:10px;padding:10px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+    .products .item b{font-weight:700}
+    .cta-bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.15);text-decoration:none;color:var(--text)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001018;border:0;font-weight:700}
+    .btn.ghost{background:transparent}
+    .highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .highlight{background:rgba(17,24,39,.6);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px;text-align:center}
+    .highlight b{font-size:20px;display:block}
+    .faq details{background:rgba(17,24,39,.6);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:12px}
+    .faq details+details{margin-top:10px}
+    .loc{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+    iframe{width:100%;border:0;min-height:260px;border-radius:12px}
+    footer{padding:28px 0 60px;color:var(--muted)}
+    .foot{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+    .social a{margin-right:10px}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    @media (max-width:900px){
+      .hero-grid, .loc {grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .highlights{grid-template-columns:repeat(2,1fr)}
+      header .menu{display:none}
+    }
+  </style>
+
+
+  <!-- LocalBusiness structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":["Store","ElectronicsStore","LocalBusiness"],
+    "name":"Tech Universe",
+    "image":"https://www.example.com/static/og-hero.jpg",
+    "url":"https://www.example.com/",
+    "telephone":"+91-XXXXXXXXXX",
+    "priceRange":"₹₹",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"[Street Address]",
+      "addressLocality":"[City]",
+      "addressRegion":"[State]",
+      "postalCode":"[PIN]",
+      "addressCountry":"IN"
+    },
+    "geo":{"@type":"GeoCoordinates","latitude":0,"longitude":0},
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"11:00","closes":"18:00"}
+    ],
+    "sameAs":[
+      "https://www.facebook.com/techuniverse",
+      "https://www.instagram.com/techuniverse",
+      "https://www.linkedin.com/company/techuniverse"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Tech Universe home">
+        <span class="logo" aria-hidden="true">🌌</span>
+        <b>Tech Universe</b>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="tel:+91XXXXXXXXXX">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Computers, Accessories & Fast Repairs in <span aria-label="Your city">[City]</span></h1>
+          <p class="sub">Shop new laptops and components, get custom PC builds, and same‑day phone & laptop repairs. Honest advice. Fair prices. Local experts.</p>
+          <div class="badges">
+            <span class="badge">Same‑day repairs</span>
+            <span class="badge">1‑year warranty</span>
+            <span class="badge">EMI available</span>
+          </div>
+          <div class="cta-bar">
+            <a class="btn primary" href="#contact">Get a Quote</a>
+            <a class="btn ghost" href="#products">Browse Products</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img loading="lazy" src="static/hero-store.jpg" alt="Interior of Tech Universe store with laptops and accessories on display">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Highlights -->
+    <section aria-labelledby="hi2">
+      <div class="wrap">
+        <h2 id="hi2">Why choose Tech Universe</h2>
+        <div class="highlights">
+          <div class="highlight"><b>4.8/5</b><span class="muted">Customer rating</span></div>
+          <div class="highlight"><b>5000+</b><span class="muted">Devices fixed</span></div>
+          <div class="highlight"><b>10yrs</b><span class="muted">Local trust</span></div>
+          <div class="highlight"><b>24–48h</b><span class="muted">Build time</span></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Services -->
+    <section id="services" class="services" aria-labelledby="s2">
+      <div class="wrap">
+        <h2 id="s2">Services</h2>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>Laptop & Phone Repairs</h3>
+            <span>Screen, battery, water damage, data recovery</span>
+            <ul>
+              <li>Free diagnostics</li>
+              <li>Genuine parts with warranty</li>
+              <li>Same‑day for common fixes</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Custom PC Builds</h3>
+            <span>Gaming, creative, office</span>
+            <ul>
+              <li>Balanced parts for your budget</li>
+              <li>Thermal & noise optimization</li>
+              <li>Delivery and setup</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Data & Networking</h3>
+            <span>Backup, NAS, Wi‑Fi setup</span>
+            <ul>
+              <li>Secure data migration</li>
+              <li>Small office networks</li>
+              <li>Cloud setup & training</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Products -->
+    <section id="products" class="products" aria-labelledby="p2">
+      <div class="wrap">
+        <h2 id="p2">Popular products</h2>
+        <div class="grid">
+          <div class="item"><span>Laptops (Dell, HP, Lenovo)</span> <b>From ₹29,990</b></div>
+          <div class="item"><span>Monitors 24–32"</span> <b>From ₹8,999</b></div>
+          <div class="item"><span>Keyboards & Mice</span> <b>From ₹799</b></div>
+          <div class="item"><span>SSDs & RAM</span> <b>From ₹999</b></div>
+          <div class="item"><span>Gaming GPUs</span> <b>Great deals</b></div>
+        </div>
+        <p class="sub">Looking for something specific? Message us with the model and budget—we’ll source it fast.</p>
+        <div class="cta-bar">
+          <a class="btn primary" href="#contact">Request Availability</a>
+          <a class="btn" href="https://wa.me/91XXXXXXXXXX">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about" aria-labelledby="a2">
+      <div class="wrap grid">
+        <div>
+          <h2 id="a2">About Tech Universe</h2>
+          <p>Founded in 2015, Tech Universe helps customers choose the right devices, not just expensive ones. We stand for transparent pricing, expert repair, and long‑term support.</p>
+          <p>Visit our store in [Area, City] or schedule a pickup for repairs anywhere in [City]. Business customers welcome.</p>
+        </div>
+        <div class="card">
+          <h3>What we promise</h3>
+          <ul>
+            <li>No‑fix, no‑fee diagnostics</li>
+            <li>Clear timelines and updates</li>
+            <li>Secure handling of your data</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section id="faq" class="faq" aria-labelledby="f2">
+      <div class="wrap">
+        <h2 id="f2">FAQ</h2>
+        <details>
+          <summary>How long do repairs take?</summary>
+          <p>Most phone screens and batteries are same‑day; laptops typically 24–72h depending on parts.</p>
+        </details>
+        <details>
+          <summary>Do you offer warranty?</summary>
+          <p>Yes, parts carry manufacturer warranty; repairs include a service warranty—ask for details by service type.</p>
+        </details>
+        <details>
+          <summary>Can you build to a budget?</summary>
+          <p>Absolutely. Tell us your use‑case and budget; we’ll configure a balanced build with an upgrade path.</p>
+        </details>
+      </div>
+    </section>
+
+
+    <!-- Contact & Location -->
+    <section id="contact" aria-labelledby="c2">
+      <div class="wrap loc">
+        <div class="card">
+          <h2 id="c2">Contact</h2>
+          <p><b>Call:</b> <a href="tel:+91XXXXXXXXXX">+91‑XXXXXXXXXX</a></p>
+          <p><b>Email:</b> <a href="mailto:hello@techuniverse.in">hello@techuniverse.in</a></p>
+          <p><b>Address:</b> [Street], [Area], [City], [State] [PIN]</p>
+          <p><b>Hours:</b> Mon–Sat 10:00–20:00, Sun 11:00–18:00</p>
+          <div class="cta-bar">
+            <a class="btn primary" href="tel:+91XXXXXXXXXX">Call Now</a>
+            <a class="btn" href="https://g.page/r/[place-id]">Directions</a>
+            <a class="btn" href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+          </div>
+        </div>
+        <div>
+          <iframe title="Tech Universe on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=[EMBED_CODE]"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <b>Tech Universe</b><br>
+        © <span id="year"></span> Tech Universe. All rights reserved.
+      </div>
+      <div class="social" aria-label="Social">
+        <a href="https://www.facebook.com/techuniverse" aria-label="Facebook">Facebook</a>
+        <a href="https://www.instagram.com/techuniverse" aria-label="Instagram">Instagram</a>
+        <a href="https://www.linkedin.com/company/techuniverse" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+      <div>
+        <a href="#home">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); history.pushState(null,'','#'+id); }
+      });
+    });
+  </script>
+</body>
+</html>
