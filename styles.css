@@ -1,0 +1,84 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+header {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header .logo { font-weight: bold; font-size: 1.2rem; }
+header nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #4a90e2, #007aff);
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background: #fff;
+  color: #007aff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.products, .emi, .faq, .contact {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 { margin-bottom: 1rem; color: #007aff; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #fff;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background: #007aff;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  header nav { display: none; flex-direction: column; }
+  header nav.show { display: flex; }
+  #menu-toggle { display: block; }
+}
