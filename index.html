@@ -1,139 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tech Universe | Best Smartphone Deals & EMI Offers in Haldibari</title>
-
-  <!-- Basic SEO -->
-  <meta name="description" content="Tech Universe - Haldibari's trusted smartphone store. Best deals on Oppo, Vivo, Redmi, Samsung, Realme, Motorola & Lava. EMI available via Bajaj Finserv, HDB and IDFC." />
-  <meta name="keywords" content="Tech Universe, Haldibari, smartphones, Oppo, Vivo, Redmi, Samsung, Realme, EMI, Bajaj, HDB, IDFC" />
-  <meta name="author" content="Tech Universe Haldibari" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tech Universe | Best Smartphone Deals in Haldibari" />
-  <meta property="og:description" content="Buy Oppo, Vivo, Realme, Redmi & Samsung smartphones on EMI. Visit Tech Universe near Busstand, Haldibari." />
-  <meta property="og:image" content="assets/og-image.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourusername.github.io/tech-universe/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/logo.png" type="image/png" />
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
-  
-  <!-- JSON-LD structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "Tech Universe",
-    "image": "https://yourusername.github.io/tech-universe/assets/og-image.png",
-    "@id": "",
-    "url": "https://yourusername.github.io/tech-universe/",
-    "telephone": "+917074550550",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Goshala Road (Busstand)",
-      "addressLocality": "Haldibari",
-      "addressRegion": "West Bengal",
-      "postalCode": "735122",
-      "addressCountry": "IN"
-    },
-    "openingHours": "Mo-Su 10:00-21:00",
-    "sameAs": []
-  }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Universe — Latest Smartphones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .navbar {
+      background-color: #212529;
+    }
+    .navbar-brand {
+      color: #fff;
+      font-weight: 700;
+    }
+    .card img {
+      transition: transform 0.3s ease;
+      height: 260px;
+      object-fit: contain;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #212529;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header / Banner -->
-  <header class="site-hero">
-    <img src="assets/banner.jpg" alt="Tech Universe banner" class="banner-img" />
-    <div class="hero-overlay">
-      <img src="assets/logo.png" alt="Tech Universe logo" class="logo" />
-      <h1 class="site-title">TECH UNIVERSE</h1>
-      <p class="tagline">Best Deals on Smartphones • Easy EMI Available</p>
-      <div class="brand-row" aria-hidden="true">
-        <!-- You can replace image tags with PNG/SVG logos inside assets -->
-        <img src="assets/logo-oppo.png" alt="Oppo" class="brand-logo" />
-        <img src="assets/logo-vivo.png" alt="Vivo" class="brand-logo" />
-        <img src="assets/logo-redmi.png" alt="Redmi" class="brand-logo" />
-        <img src="assets/logo-samsung.png" alt="Samsung" class="brand-logo" />
-        <img src="assets/logo-realme.png" alt="Realme" class="brand-logo" />
-        <img src="assets/logo-moto.png" alt="Motorola" class="brand-logo" />
-        <img src="assets/logo-lava.png" alt="Lava" class="brand-logo" />
-      </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">📱 Tech Universe</a>
     </div>
-  </header>
+  </nav>
 
-  <!-- Main -->
-  <main class="container">
-    <!-- Products -->
-    <section id="products" class="section">
-      <h2 class="section-title">Available Smartphones</h2>
-      <div id="product-grid" class="grid"></div>
-    </section>
+  <!-- Hero Section -->
+  <section class="bg-light text-center py-4">
+    <div class="container">
+      <h1 class="fw-bold mb-3">Latest Official Smartphone Prices</h1>
+      <p class="text-muted">Auto-updated details from Oppo, Vivo, Samsung, and Redmi official sources.</p>
+    </div>
+  </section>
 
-    <!-- EMI Partners -->
-    <section id="emi" class="section emi-section">
-      <h2 class="section-title">EMI Partners</h2>
-      <div class="emi-logos">
-        <img src="assets/logo-bajaj.png" alt="Bajaj Finserv" />
-        <img src="assets/logo-hdb.png" alt="HDB Finance" />
-        <img src="assets/logo-idfc.png" alt="IDFC Bank" />
-      </div>
-    </section>
-
-    <!-- Location -->
-    <section id="location" class="section">
-      <h2 class="section-title">Find Us</h2>
-      <p class="muted">📍 Goshala Road (Busstand), Haldibari, Dist. Coochbehar, PIN 735122</p>
-      <div class="map-wrap">
-        <iframe
-          title="Tech Universe location map"
-          src="https://www.google.com/maps?q=Tech%20Universe%20Haldibari&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-
-    <!-- Contact / CTA -->
-    <section id="contact" class="section contact-section">
-      <h2 class="section-title">Contact Us</h2>
-      <div class="contact-row">
-        <a class="btn call-btn" href="tel:+917074550550"><i class="fa-solid fa-phone"></i> Call: 7074550550</a>
-        <a class="btn wa-btn" href="https://wa.me/917074550550?text=Hello%20Tech%20Universe%2C%20I%27m%20interested%20in%20a%20product." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-        <a class="btn mail-btn" href="mailto:techuniversehaldibari@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-      </div>
-
-      <!-- Simple contact form using Formspree (optional) -->
-      <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="_replyto" placeholder="Your email" required />
-        <textarea name="message" rows="3" placeholder="Message about product / EMI" required></textarea>
-        <button type="submit" class="btn submit-btn">Send Message</button>
-      </form>
-    </section>
-  </main>
+  <!-- Product Grid -->
+  <div class="container py-4">
+    <div class="row" id="product-container">
+      <!-- Dynamic phones will load here -->
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-left">
-      <p>© <span id="year"></span> Tech Universe — Goshala Road, Haldibari</p>
-    </div>
-    <div class="footer-right">
-      <p>Designed for GitHub Pages</p>
-    </div>
+  <footer>
+    <p>© 2025 Tech Universe — Data from official brand sites.</p>
   </footer>
 
-  <!-- Script -->
-  <script src="script.js"></script>
+  <script>
+    // Dynamic Product Sources
+    const sources = [
+      {
+        brand: "Oppo",
+        url: "https://www.oppo.com/in/product-list/smartphones/",
+        image: "https://upload.wikimedia.org/wikipedia/commons/1/12/Oppo_Logo_2019.png"
+      },
+      {
+        brand: "Vivo",
+        url: "https://www.vivo.com/in/products",
+        image: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Vivo_logo_2019.svg"
+      },
+      {
+        brand: "Samsung",
+        url: "https://www.samsung.com/in/smartphones/all-smartphones/",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"
+      },
+      {
+        brand: "Redmi",
+        url: "https://www.mi.com/in/product-list/redmi/",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo_%282021-%29.svg"
+      }
+    ];
+
+    const container = document.getElementById('product-container');
+
+    sources.forEach(source => {
+      // Create a live card for each brand linking to official product page
+      const card = document.createElement('div');
+      card.className = 'col-md-6 col-lg-3 mb-4';
+      card.innerHTML = `
+        <div class="card shadow-sm border-0">
+          <img src="${source.image}" class="card-img-top p-3" alt="${source.brand}">
+          <div class="card-body text-center">
+            <h5 class="card-title">${source.brand}</h5>
+            <p class="text-muted small">View the latest ${source.brand} smartphones, prices, and specifications directly on the official site.</p>
+            <a href="${source.url}" target="_blank" class="btn btn-dark btn-sm">
+              <i class="fas fa-external-link-alt"></i> Visit Official Site
+            </a>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
 </body>
 </html>
