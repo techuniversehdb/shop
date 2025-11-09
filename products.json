@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "High-Performance Gaming Laptop",
+            "description": "Ideal for students and professionals. High refresh rate display and fast processor.",
+            "price": "65,000",
+            "image": "product_laptop.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Smartphone Accessories Bundle",
+            "description": "Tempered glass, fast charger, and premium case for the latest phones.",
+            "price": "1,500",
+            "image": "product_accessories.jpg"
+        },
+        {
+            "id": 3,
+            "name": "SSD & RAM Upgrade Service",
+            "description": "Give your old PC a new life! Fast, reliable installation and data transfer.",
+            "price": "Contact for Quote",
+            "image": "product_upgrade.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Custom PC Build (Budget)",
+            "description": "Affordable desktop solutions built specifically for home and office use.",
+            "price": "25,000",
+            "image": "product_pc.jpg"
+        }
+    ]
+}
