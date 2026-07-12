@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================
+  SITEMAP INDEX — Tech Universe
+  Website  : https://techuniversehdb.in
+  Business : Mobile Phone Store, Haldibari, Cooch Behar, WB
+  Updated  : 2026-07-12
+  ============================================================
+-->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+              http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+
+  <!-- Pages Sitemap -->
+  <sitemap>
+    <loc>https://techuniversehdb.in/sitemap-pages.xml</loc>
+    <lastmod>2026-07-12</lastmod>
+  </sitemap>
+
+  <!-- Images Sitemap -->
+  <sitemap>
+    <loc>https://techuniversehdb.in/sitemap-images.xml</loc>
+    <lastmod>2026-07-12</lastmod>
+  </sitemap>
+
+</sitemapindex>
