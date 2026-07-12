@@ -1,0 +1,15 @@
+/* TEAM */
+Owner     : Tech Universe
+Store     : Tech Universe
+Location  : Haldibari, Cooch Behar, West Bengal, India
+
+/* SITE */
+Last update   : 2026-07-12
+Language      : English
+Doctype       : HTML5
+IDE           : VS Code / GitHub
+
+/* CONTACT */
+Phone   : +91-7074550550
+Email   : info@techuniversehdb.in
+Website : https://techuniversehdb.in
