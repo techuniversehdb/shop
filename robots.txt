@@ -1,0 +1,330 @@
+# ===========================================================
+# robots.txt — Tech Universe (https://techuniversehdb.in)
+# Mobile Phone Store — Haldibari, Cooch Behar, West Bengal
+# Last Updated: 2026-07-12
+# ===========================================================
+
+# ===========================================================
+# SECTION 1 — GOOGLE BOTS
+# ===========================================================
+
+# Main Google crawler — full access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+# Google Images — allow all product/shop images
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /favicon/
+Crawl-delay: 2
+
+# Google Mobile crawler
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 2
+
+# Google AdsBot — for ad quality checks
+User-agent: AdsBot-Google
+Allow: /
+
+# Google Shopping
+User-agent: Googlebot-Product
+Allow: /
+
+# ===========================================================
+# SECTION 2 — BING & MICROSOFT BOTS
+# ===========================================================
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: MSNBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: MSNBot-Media
+Allow: /images/
+Allow: /favicon/
+Crawl-delay: 2
+
+User-agent: BingPreview
+Allow: /
+
+# ===========================================================
+# SECTION 3 — OTHER MAJOR SEARCH ENGINES
+# ===========================================================
+
+# Yahoo (uses Bing index)
+User-agent: Slurp
+Allow: /
+Crawl-delay: 3
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+# Yandex (Russia)
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 3
+
+User-agent: YandexImages
+Allow: /images/
+Crawl-delay: 3
+
+# Baidu (China)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+# Sogou (China)
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 5
+
+# Naver (South Korea)
+User-agent: Yeti
+Allow: /
+Crawl-delay: 3
+
+# ===========================================================
+# SECTION 4 — AI AGENT CRAWLERS
+# ===========================================================
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /images/
+Crawl-delay: 2
+
+# OpenAI SearchGPT
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# Meta AI (Facebook/Instagram AI)
+User-agent: meta-externalagent
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# Apple Applebot (Siri)
+User-agent: Applebot
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# Microsoft Copilot
+User-agent: msnbot-UDiscovery
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# Amazon Alexa
+User-agent: ia_archiver
+Allow: /
+Crawl-delay: 3
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# You.com
+User-agent: YouBot
+Allow: /
+Allow: /llms.txt
+Crawl-delay: 2
+
+# ===========================================================
+# SECTION 5 — SOCIAL MEDIA CRAWLERS
+# ===========================================================
+
+# Facebook / Meta link preview
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# Facebook / Meta crawler
+User-agent: Facebot
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# Instagram link preview
+User-agent: Instagram
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# Twitter / X link preview
+User-agent: Twitterbot
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# WhatsApp link preview
+User-agent: WhatsApp
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# LinkedIn link preview
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# Pinterest
+User-agent: Pinterestbot
+Allow: /
+Allow: /images/
+Crawl-delay: 2
+
+# Telegram link preview
+User-agent: TelegramBot
+Allow: /
+Allow: /images/
+Crawl-delay: 1
+
+# ===========================================================
+# SECTION 6 — DIRECTORY & LISTING CRAWLERS
+# ===========================================================
+
+# JustDial
+User-agent: JustDial
+Allow: /
+Crawl-delay: 3
+
+# IndiaMART
+User-agent: IndiaMART
+Allow: /
+Crawl-delay: 3
+
+# Sulekha
+User-agent: Sulekha
+Allow: /
+Crawl-delay: 3
+
+# ===========================================================
+# SECTION 7 — SEO & ANALYTICS TOOLS
+# ===========================================================
+
+# Ahrefs
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+# SEMrush
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+# Moz
+User-agent: rogerbot
+Allow: /
+Crawl-delay: 5
+
+# Majestic SEO
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+# Archive.org (Wayback Machine)
+User-agent: ia_archiver
+Allow: /
+Crawl-delay: 5
+
+# ===========================================================
+# SECTION 8 — BLOCK BAD BOTS
+# ===========================================================
+
+# Scrapers & spam bots — blocked
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: SurveyBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: AhrefsBot-Scam
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ===========================================================
+# SECTION 9 — DEFAULT RULE (all other bots)
+# ===========================================================
+
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /favicon/
+Allow: /llms.txt
+Allow: /humans.txt
+Allow: /sitemap.xml
+Allow: /robots.txt
+Disallow: /private/
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /*.json$
+Crawl-delay: 5
+
+# ===========================================================
+# SECTION 10 — SITEMAPS
+# ===========================================================
+
+Sitemap: https://techuniversehdb.in/sitemap.xml
+Sitemap: https://techuniversehdb.in/sitemap-images.xml
+
+# ===========================================================
+# SECTION 11 — HOST DECLARATION
+# ===========================================================
+
+Host: https://techuniversehdb.in
