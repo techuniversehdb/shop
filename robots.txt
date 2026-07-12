@@ -321,6 +321,7 @@ Crawl-delay: 5
 # ===========================================================
 
 Sitemap: https://techuniversehdb.in/sitemap.xml
+Sitemap: https://techuniversehdb.in/sitemap-pages.xml
 Sitemap: https://techuniversehdb.in/sitemap-images.xml
 
 # ===========================================================
