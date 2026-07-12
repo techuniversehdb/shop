@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================
+  IMAGE SITEMAP — Tech Universe
+  Website : https://techuniversehdb.in
+  Updated : 2026-07-12
+  Helps Google Image Search index your shop photos
+  ============================================================
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ==================== HOMEPAGE IMAGES ==================== -->
+  <url>
+    <loc>https://techuniversehdb.in/</loc>
+
+    <!-- OG / Social Share Image -->
+    <image:image>
+      <image:loc>
+        https://techuniversehdb.in/images/og-image.jpg
+      </image:loc>
+      <image:title>
+        Tech Universe — Mobile Phone Store, Haldibari
+      </image:title>
+      <image:caption>
+        Tech Universe is the most trusted mobile phone
+        and accessories store in Haldibari, Gosala Road,
+        Cooch Behar, West Bengal — PIN 735122
+      </image:caption>
+      <image:geo_location>
+        Haldibari, Cooch Behar, West Bengal, India
+      </image:geo_location>
+      <image:license>
+        https://techuniversehdb.in
+      </image:license>
+    </image:image>
+
+    <!-- Shop Photo 1 — Storefront -->
+    <image:image>
+      <image:loc>
+        https://techuniversehdb.in/images/shop-1.jpg
+      </image:loc>
+      <image:title>
+        Tech Universe Storefront — Gosala Road, Haldibari
+      </image:title>
+      <image:caption>
+        Exterior view of Tech Universe mobile phone store
+        on Gosala Road, Haldibari, Cooch Behar, West Bengal.
+        Best mobile shop in Haldibari.
+      </image:caption>
+      <image:geo_location>
+        Haldibari, Cooch Behar, West Bengal, India
+      </image:geo_location>
+      <image:license>
+        https://techuniversehdb.in
+      </image:license>
+    </image:image>
+
+    <!-- Shop Photo 2 — Display Counter -->
+    <image:image>
+      <image:loc>
+        https://techuniversehdb.in/images/shop-2.jpg
+      </image:loc>
+      <image:title>
+        Phone Display Counter — Tech Universe Haldibari
+      </image:title>
+      <image:caption>
+        Latest Samsung, Apple iPhone, Vivo, OPPO and
+        Redmi smartphones on display at Tech Universe,
+        Haldibari, Cooch Behar, West Bengal
+      </image:caption>
+      <image:geo_location>
+        Haldibari, Cooch Behar, West Bengal, India
+      </image:geo_location>
+      <image:license>
+        https://techuniversehdb.in
+      </image:license>
+    </image:image>
+
+    <!-- Shop Photo 3 — Accessories -->
+    <image:image>
+      <image:loc>
+        https://techuniversehdb.in/images/shop-3.jpg
+      </image:loc>
+      <image:title>
+        Mobile Accessories — Tech Universe Haldibari
+      </image:title>
+      <image:caption>
+        Genuine mobile accessories including chargers,
+        phone cases, screen guards, earbuds and power
+        banks at Tech Universe, Haldibari, Cooch Behar
+      </image:caption>
+      <image:geo_location>
+        Haldibari, Cooch Behar, West Bengal, India
+      </image:geo_location>
+      <image:license>
+        https://techuniversehdb.in
+      </image:license>
+    </image:image>
+
+    <!-- Shop Photo 4 — EMI Counter -->
+    <image:image>
+      <image:loc>
+        https://techuniversehdb.in/images/shop-4.jpg
+      </image:loc>
+      <image:title>
+        EMI Finance Counter — Tech Universe Haldibari
+      </image:title>
+      <image:caption>
+        Easy EMI phone finance at Tech Universe Haldibari
+        through Bajaj Finserv, HDB Finance, Samsung
+        Finance+ and 4 other partners. ₹0 down payment
+        available on select models.
+      </image:caption>
+      <image:geo_location>
+        Haldibari, Cooch Behar, West Bengal, India
+      </image:geo_location>
+      <image:license>
+        https://techuniversehdb.in
+      </image:license>
+    </image:image>
+
+    <!-- Shop Photo 5 — Team -->
+    <image:image>
+      <image:loc>
+        https://techuniversehdb.in/images/shop-5.jpg
+      </image:loc>
+      <image:title>
+        Tech Universe Team — Haldibari Mobile Store
+      </image:title>
+      <image:caption>
+        The Tech Universe team at our Gosala Road store
+        in Haldibari, Cooch Behar, West Bengal. Trusted
+        local mobile phone store since 2023.
+      </image:caption>
+      <image:geo_location>
+        Haldibari, Cooch Behar, West Bengal, India
+      </image:geo_location>
+      <image:license>
+        https://techuniversehdb.in
+      </image:license>
+    </image:image>
+
+  </url>
+</urlset>
