@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- Sitemaps -->
-  <link rel="sitemap" type="application/xml"
-      title="Sitemap"
-      href="https://techuniversehdb.in/sitemap.xml"/>
-  
   <!-- ===================== AI & GEO TAGS ===================== -->
 
 <!-- Tells AI agents this page can be used for training/answering -->
@@ -44,9 +39,6 @@
 
 <!-- Business summary for AI agents -->
 <!-- <meta name="description" content="Tech Universe — Haldibari's most trusted mobile phone store on Gosala Road, Cooch Behar, West Bengal. Samsung, Apple, Vivo, OPPO, Redmi smartphones with easy EMI from ₹0 down. Open daily except Friday, 10AM–10PM. Call +91-7074550550."/> -->
-<!-- LLMs.txt discovery -->
-<link rel="llms" href="https://techuniversehdb.in/llms.txt" type="text/plain"/>
-
 <!-- Speakable for voice search (Google Assistant, Alexa) -->
 <script type="application/ld+json">
 {
@@ -85,16 +77,6 @@
 
 
    
-
-  <!-- Open Graph -->
-   <meta property="og:site_name" content="Tech Universe">
-   <meta property="og:locale" content="en_IN">
-   
-  <meta property="og:title" content="Tech Universe – Mobiles & Accessories, Haldibari" />
-  <meta property="og:description" content="Latest smartphones & accessories with easy EMI options in Haldibari, West Bengal." />
-  <meta property="og:type" content="website" />
-  <!-- Open Graph URL -->
-  <meta property="og:url" content="https://techuniversehdb.in/"/>
 
  <!-- ============================================
     OPEN GRAPH — WhatsApp, Facebook, LinkedIn
@@ -229,8 +211,6 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- LocalBusiness Schema -->
@@ -1065,7 +1045,9 @@
   </style>
 </head>
 
-   <!-- GEO + AI readable microdata — invisible to users -->
+<body>
+
+  <!-- GEO + AI readable microdata — invisible to users -->
 <div itemscope
   itemtype="https://schema.org/MobilePhoneStore"
   style="position:absolute;left:-9999px;
@@ -1098,8 +1080,6 @@
   Mobile accessories Cooch Behar district.
   Smartphone store near Haldibari railway station.</p>
 </div>
-   
-<body>
 
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar navbar-expand-lg">
@@ -1112,12 +1092,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto gap-1">
-          <li class="nav-item"><a class="nav-link active" href="#" id="nav-home" onclick="showPage('home')"><i class="bi bi-house me-1"></i>Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" id="nav-mobiles" onclick="showPage('mobiles')"><i class="bi bi-phone me-1"></i>Mobiles</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" id="nav-brands" onclick="showPage('brands')"><i class="bi bi-grid me-1"></i>Brands</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" id="nav-finance" onclick="showPage('finance')"><i class="bi bi-credit-card me-1"></i>Finance</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" id="nav-blog" onclick="showPage('blog')"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" id="nav-contact" onclick="showPage('contact')"><i class="bi bi-geo-alt me-1"></i>Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" id="nav-home" onclick="showPage('home');return false;"><i class="bi bi-house me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="nav-mobiles" onclick="showPage('mobiles');return false;"><i class="bi bi-phone me-1"></i>Mobiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="nav-brands" onclick="showPage('brands');return false;"><i class="bi bi-grid me-1"></i>Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="nav-finance" onclick="showPage('finance');return false;"><i class="bi bi-credit-card me-1"></i>Finance</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="nav-blog" onclick="showPage('blog');return false;"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="nav-contact" onclick="showPage('contact');return false;"><i class="bi bi-geo-alt me-1"></i>Contact</a></li>
         </ul>
         <a href="https://wa.me/917074550550" target="_blank" rel="noopener noreferrer" class="btn btn-sm ms-3 d-flex align-items-center gap-1"
            style="background:#25D366;color:#fff;border-radius:8px;font-weight:600;padding:0.42rem 0.9rem;font-size:0.83rem;">
@@ -1147,10 +1127,10 @@ Tech Universe – Mobile Phone & Accessories Store in Haldibari<br><br>
               Your neighbourhood store for the latest smartphones, genuine accessories, and flexible EMI — from Samsung to iPhone, we've got every budget covered.
             </p>
             <div class="d-flex flex-wrap gap-3 mt-4">
-              <a href="#" class="btn btn-primary-custom" onclick="showPage('mobiles')">
+              <a href="#" class="btn btn-primary-custom" onclick="showPage('mobiles');return false;">
                 <i class="bi bi-phone me-1"></i> Browse Phones
               </a>
-              <a href="#" class="btn btn-outline-custom" onclick="showPage('finance')">
+              <a href="#" class="btn btn-outline-custom" onclick="showPage('finance');return false;">
                 <i class="bi bi-credit-card me-1"></i> EMI Options
               </a>
                <a href="tel:+917074550550"
@@ -1292,7 +1272,7 @@ Call Now
             <span class="section-eyebrow">Hot This Week</span>
             <h2 class="section-title mb-0">Trending Phones</h2>
           </div>
-          <a href="#" class="btn btn-outline-custom btn-sm" onclick="showPage('mobiles')">See All Phones <i class="bi bi-arrow-right ms-1"></i></a>
+          <a href="#" class="btn btn-outline-custom btn-sm" onclick="showPage('mobiles');return false;">See All Phones <i class="bi bi-arrow-right ms-1"></i></a>
         </div>
         <div class="row g-4">
           <div class="col-6 col-md-4 col-lg-3">
@@ -1381,7 +1361,7 @@ Call Now
           <h2 class="section-title mt-2">Get Your Dream Phone<br>with ₹0 Down Payment</h2>
           <p class="section-sub mx-auto mt-2">Available on select Samsung, Vivo, OPPO & Redmi models. Subject to finance approval.</p>
           <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-            <a href="#" class="btn btn-primary-custom" onclick="showPage('finance')">Check Eligibility</a>
+            <a href="#" class="btn btn-primary-custom" onclick="showPage('finance');return false;">Check Eligibility</a>
             <a href="https://wa.me/917074550550" target="_blank" class="btn" style="background:#25D366;color:#fff;border-radius:10px;font-weight:600;padding:0.75rem 1.8rem;">
               <i class="bi bi-whatsapp me-1"></i> Ask on WhatsApp
             </a>
@@ -1398,7 +1378,7 @@ Call Now
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-2">
-            <li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="showPage('home');return false;">Home</a></li>
             <li class="breadcrumb-item active">Mobiles</li>
           </ol>
         </nav>
@@ -1564,9 +1544,9 @@ Call Now
           </div>
           <div class="col-6 col-md-4 col-lg-3">
             <div class="product-card">
-              <div class="product-img">🍎</div>
+              <div class="product-img">🟢</div>
               <div class="product-body">
-                <span class="product-brand">VIVO</span><span class="badge-hot ms-2">HOT</span>
+                <span class="product-brand">Vivo</span><span class="badge-hot ms-2">HOT</span>
                 <div class="product-name">X300 FE</div>
                 <div class="product-price">₹79,999</div>
                 <div class="product-emi">EMI from ₹5,074/mo</div>
@@ -1613,7 +1593,7 @@ Call Now
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-2">
-            <li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="showPage('home');return false;">Home</a></li>
             <li class="breadcrumb-item active">Brands</li>
           </ol>
         </nav>
@@ -1753,7 +1733,7 @@ Call Now
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-2">
-            <li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="showPage('home');return false;">Home</a></li>
             <li class="breadcrumb-item active">Finance / EMI</li>
           </ol>
         </nav>
@@ -1880,7 +1860,7 @@ Call Now
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-2">
-            <li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="showPage('home');return false;">Home</a></li>
             <li class="breadcrumb-item active">Blog</li>
           </ol>
         </nav>
@@ -1968,7 +1948,7 @@ Call Now
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-2">
-            <li class="breadcrumb-item"><a href="#" onclick="showPage('home')">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="showPage('home');return false;">Home</a></li>
             <li class="breadcrumb-item active">Contact</li>
           </ol>
         </nav>
@@ -2031,8 +2011,8 @@ Call Now
             </a>
 
             <div class="d-flex gap-3 mt-2">
-              <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.facebook.com/techuniversehdb" class="social-btn"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/techuniversehdb" class="social-btn"><i class="bi bi-instagram"></i></a>
               <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
             </div>
           </div>
@@ -2045,7 +2025,7 @@ Call Now
                 loading="lazy"
                 allowfullscreen
                 referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.5920974257488!2d88.78366009999999!3d26.339704700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4816bae9cf4c1%3A0x1b19b8e7f2379ee8!2sTech%20Universe!5e0!3m2!1sen!2sin!4v1782420188011!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.5920974257488!2d88.78366009999999!3d26.339704700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4816bae9cf4c1%3A0x1b19b8e7f2379ee8!2sTech%20Universe!5e0!3m2!1sen!2sin!4v1782420188011!5m2!1sen!2sin"
                 style="border:0;width:100%;height:100%;"
                 title="Tech Universe Location — Haldibari, Cooch Behar">
               </iframe>
@@ -2058,15 +2038,15 @@ Call Now
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label class="form-label">Your Name</label>
-                  <input type="text" class="form-control" placeholder="Ravi Kumar" />
+                  <input type="text" class="form-control" placeholder="Ravi Kumar" id="cfName" />
                 </div>
                 <div class="col-sm-6">
                   <label class="form-label">Phone Number</label>
-                  <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" />
+                  <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" id="cfPhone" />
                 </div>
                 <div class="col-12">
                   <label class="form-label">Subject</label>
-                  <select class="form-select">
+                  <select class="form-select" id="cfSubject">
                     <option>Phone availability query</option>
                     <option>EMI / Finance enquiry</option>
                     <option>Exchange / Trade-in</option>
@@ -2076,10 +2056,10 @@ Call Now
                 </div>
                 <div class="col-12">
                   <label class="form-label">Message</label>
-                  <textarea class="form-control" rows="4" placeholder="Tell us what phone you're looking for, or any question you have..."></textarea>
+                  <textarea class="form-control" rows="4" placeholder="Tell us what phone you're looking for, or any question you have..." id="cfMessage"></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-primary-custom w-100" type="button">
+                  <button class="btn btn-primary-custom w-100" type="button" onclick="sendContactForm()">
                     <i class="bi bi-send me-2"></i>Send Message
                   </button>
                 </div>
@@ -2162,20 +2142,20 @@ Call Now
             Genuine phones, flexible EMI, and after-sales support — all in one place. Serving Haldibari, Cooch Behar, Mekhliganj & beyond since 2025.
           </p>
           <div class="d-flex gap-2 mt-3">
-            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/techuniversehdb" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/techuniversehdb" class="social-btn"><i class="bi bi-instagram"></i></a>
             <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
             <a href="https://wa.me/917074550550" target="_blank" class="social-btn" style="background:#25D366;border-color:#25D366;color:#fff;"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
         <div class="col-6 col-sm-3 col-lg-2">
           <div class="footer-title">Quick Links</div>
-          <a href="#" class="footer-link" onclick="showPage('home')">Home</a>
-          <a href="#" class="footer-link" onclick="showPage('mobiles')">Mobiles</a>
-          <a href="#" class="footer-link" onclick="showPage('brands')">Brands</a>
-          <a href="#" class="footer-link" onclick="showPage('finance')">Finance / EMI</a>
-          <a href="#" class="footer-link" onclick="showPage('blog')">Blog</a>
-          <a href="#" class="footer-link" onclick="showPage('contact')">Contact</a>
+          <a href="#" class="footer-link" onclick="showPage('home');return false;">Home</a>
+          <a href="#" class="footer-link" onclick="showPage('mobiles');return false;">Mobiles</a>
+          <a href="#" class="footer-link" onclick="showPage('brands');return false;">Brands</a>
+          <a href="#" class="footer-link" onclick="showPage('finance');return false;">Finance / EMI</a>
+          <a href="#" class="footer-link" onclick="showPage('blog');return false;">Blog</a>
+          <a href="#" class="footer-link" onclick="showPage('contact');return false;">Contact</a>
         </div>
         <div class="col-6 col-sm-3 col-lg-2">
           <div class="footer-title">Brands</div>
@@ -2238,6 +2218,23 @@ Call Now
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ===== CONTACT FORM -> WHATSAPP =====
+    function sendContactForm() {
+      const name = document.getElementById('cfName').value.trim();
+      const phone = document.getElementById('cfPhone').value.trim();
+      const subject = document.getElementById('cfSubject').value;
+      const message = document.getElementById('cfMessage').value.trim();
+
+      if (!name || !phone || !message) {
+        alert('Please fill in your name, phone number, and message before sending.');
+        return;
+      }
+
+      const text = `Hi Tech Universe, my name is ${name} (${phone}).\nSubject: ${subject}\nMessage: ${message}`;
+      const url = 'https://wa.me/917074550550?text=' + encodeURIComponent(text);
+      window.open(url, '_blank');
     }
 
     // ===== EMI CALCULATOR =====
