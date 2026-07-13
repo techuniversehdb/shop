@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found – Tech Universe Haldibari</title>
+  <meta name="description" content="Oops! This page doesn't exist. Head back to Tech Universe — Haldibari's best mobile phone store."/>
+  <meta name="robots" content="noindex, follow"/>
+  <link rel="canonical" href="https://techuniversehdb.in/"/>
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --navy:   #07080f;
+      --blue:   #2563EB;
+      --blue-lt:#3B82F6;
+      --amber:  #F59E0B;
+      --white:  #F1F5FF;
+      --slate:  #64748B;
+      --border: rgba(255,255,255,0.07);
+      --ff-h:   'Poppins', sans-serif;
+      --ff-b:   'Inter', sans-serif;
+      --t:      0.25s cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--ff-b);
+      background: var(--navy);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animated grid background */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px);
+      background-size: 55px 55px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Floating orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(80px);
+      animation: orbFloat 8s ease-in-out infinite;
+    }
+    .orb-1 {
+      width: 400px; height: 400px;
+      background: rgba(37,99,235,0.12);
+      top: -100px; right: -100px;
+      animation-delay: 0s;
+    }
+    .orb-2 {
+      width: 300px; height: 300px;
+      background: rgba(245,158,11,0.07);
+      bottom: -80px; left: -80px;
+      animation-delay: 3s;
+    }
+    .orb-3 {
+      width: 200px; height: 200px;
+      background: rgba(37,99,235,0.08);
+      top: 40%; left: 30%;
+      animation-delay: 1.5s;
+    }
+    @keyframes orbFloat {
+      0%,100% { transform: translateY(0) scale(1); }
+      50%      { transform: translateY(-20px) scale(1.05); }
+    }
+
+    /* Floating particles */
+    .particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .particle {
+      position: absolute;
+      width: 3px; height: 3px;
+      background: var(--blue-lt);
+      border-radius: 50%;
+      opacity: 0;
+      animation: particleRise linear infinite;
+    }
+    @keyframes particleRise {
+      0%   { opacity: 0; transform: translateY(0) scale(0); }
+      10%  { opacity: 0.6; transform: translateY(-20px) scale(1); }
+      90%  { opacity: 0.2; }
+      100% { opacity: 0; transform: translateY(-300px) scale(0.5); }
+    }
+
+    /* Main content */
+    .container {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    /* Broken phone SVG */
+    .phone-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .phone-wrap svg {
+      animation: phoneWobble 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 30px rgba(37,99,235,0.3));
+    }
+    @keyframes phoneWobble {
+      0%,100% { transform: rotate(-3deg) translateY(0); }
+      25%      { transform: rotate(3deg) translateY(-8px); }
+      50%      { transform: rotate(-2deg) translateY(0); }
+      75%      { transform: rotate(2deg) translateY(-4px); }
+    }
+
+    /* Crack lines animation */
+    .crack {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: crackDraw 1.5s ease forwards;
+    }
+    .crack-1 { animation-delay: 0.3s; }
+    .crack-2 { animation-delay: 0.6s; }
+    .crack-3 { animation-delay: 0.9s; }
+    @keyframes crackDraw {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* 404 number */
+    .error-code {
+      font-family: var(--ff-h);
+      font-size: clamp(6rem, 20vw, 10rem);
+      font-weight: 900;
+      letter-spacing: -6px;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--blue-lt), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+      animation: numberPulse 2s ease-in-out infinite;
+      position: relative;
+    }
+
+    /* Glitch effect on 404 */
+    .error-code::before,
+    .error-code::after {
+      content: '404';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      background: linear-gradient(135deg, var(--blue-lt), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .error-code::before {
+      animation: glitch1 4s infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    }
+    .error-code::after {
+      animation: glitch2 4s infinite;
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    }
+    @keyframes glitch1 {
+      0%,90%,100% { transform: translate(0); opacity: 0; }
+      92%          { transform: translate(-3px, 1px); opacity: 0.5; }
+      94%          { transform: translate(3px, -1px); opacity: 0.5; }
+      96%          { transform: translate(-2px, 2px); opacity: 0.5; }
+      98%          { transform: translate(0); opacity: 0; }
+    }
+    @keyframes glitch2 {
+      0%,91%,100% { transform: translate(0); opacity: 0; }
+      93%          { transform: translate(3px, -1px); opacity: 0.5; }
+      95%          { transform: translate(-3px, 1px); opacity: 0.5; }
+      97%          { transform: translate(2px, -2px); opacity: 0.5; }
+      99%          { transform: translate(0); opacity: 0; }
+    }
+
+    @keyframes numberPulse {
+      0%,100% { filter: drop-shadow(0 0 20px rgba(37,99,235,0.5)); }
+      50%      { filter: drop-shadow(0 0 40px rgba(37,99,235,0.8)); }
+    }
+
+    .error-title {
+      font-family: var(--ff-h);
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.75rem;
+      color: var(--white);
+    }
+
+    .error-sub {
+      font-size: 1rem;
+      color: rgba(241,245,255,0.5);
+      line-height: 1.75;
+      max-width: 420px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Countdown */
+    .auto-redirect {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(37,99,235,0.1);
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      font-size: 0.82rem;
+      color: #93c5fd;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    .auto-redirect .dot {
+      width: 7px; height: 7px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%,100%{ opacity: 1; }
+      50%     { opacity: 0.2; }
+    }
+
+    /* Progress bar */
+    .redirect-bar {
+      width: 200px;
+      height: 3px;
+      background: rgba(37,99,235,0.15);
+      border-radius: 2px;
+      margin: 0 auto 2rem;
+      overflow: hidden;
+    }
+    .redirect-progress {
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue), var(--blue-lt));
+      border-radius: 2px;
+      animation: progressFill 10s linear forwards;
+    }
+    @keyframes progressFill {
+      from { width: 0%; }
+      to   { width: 100%; }
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue), #1d4ed8);
+      color: #fff;
+      font-family: var(--ff-h);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.78rem 1.6rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,99,235,0.3);
+      transition: all var(--t);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37,99,235,0.5);
+      color: #fff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      font-family: var(--ff-h);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.76rem 1.6rem;
+      border-radius: 12px;
+      border: 1.5px solid rgba(241,245,255,0.18);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      transition: all var(--t);
+    }
+    .btn-outline:hover {
+      border-color: var(--blue-lt);
+      color: var(--blue-lt);
+      transform: translateY(-2px);
+    }
+
+    .btn-wa {
+      background: #25D366;
+      color: #fff;
+      font-family: var(--ff-h);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.78rem 1.6rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.25);
+      transition: all var(--t);
+    }
+    .btn-wa:hover {
+      background: #1db954;
+      transform: translateY(-2px);
+      color: #fff;
+    }
+
+    /* Quick links */
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .ql-label {
+      width: 100%;
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--slate);
+      margin-bottom: 0.25rem;
+    }
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.8rem;
+      color: rgba(241,245,255,0.6);
+      text-decoration: none;
+      transition: all var(--t);
+    }
+    .quick-link:hover {
+      background: rgba(37,99,235,0.1);
+      border-color: rgba(37,99,235,0.3);
+      color: var(--white);
+    }
+    .quick-link i { font-size: 0.85rem; color: var(--blue-lt); }
+
+    /* Store info bar */
+    .store-bar {
+      background: rgba(12,15,32,0.7);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .store-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+      color: rgba(241,245,255,0.5);
+    }
+    .store-item i {
+      font-size: 0.9rem;
+      color: var(--blue-lt);
+    }
+    .store-item strong { color: var(--white); }
+
+    /* Divider */
+    .divider {
+      width: 60px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+
+    /* Navbar mini */
+    .mini-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(7,8,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-family: var(--ff-h);
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .brand-icon {
+      width: 30px; height: 30px;
+      background: linear-gradient(135deg, var(--blue), #1d4ed8);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+    }
+    .brand span { color: var(--amber); }
+
+    /* WA FAB */
+    .wa-fab {
+      position: fixed;
+      bottom: 1.5rem; right: 1.5rem;
+      z-index: 999;
+      width: 54px; height: 54px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      animation: waflt 3s ease-in-out infinite;
+    }
+    .wa-fab:hover {
+      transform: scale(1.1);
+      color: #fff;
+      animation: none;
+    }
+    @keyframes waflt {
+      0%,100%{ transform: translateY(0); }
+      50%     { transform: translateY(-7px); }
+    }
+
+    @media(max-width:480px) {
+      .error-code { letter-spacing: -4px; }
+      .store-bar { flex-direction: column; gap: 0.6rem; }
+      .btn-group { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-outline, .btn-wa { width: 100%; justify-content: center; }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      *, *::before, *::after { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background layers -->
+  <div class="bg-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- Mini navbar -->
+  <nav class="mini-nav">
+    <a href="https://techuniversehdb.in/" class="brand">
+      <div class="brand-icon">📱</div>
+      Tech<span>Universe</span>
+    </a>
+    <a href="https://wa.me/917074550550?text=Hi Tech Universe, I need help finding something on your website."
+       target="_blank"
+       style="display:inline-flex;align-items:center;gap:.4rem;background:#25D366;color:#fff;font-size:.8rem;font-weight:600;padding:.38rem .9rem;border-radius:8px;text-decoration:none">
+      <i class="bi bi-whatsapp"></i> Help
+    </a>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container" style="margin-top:60px">
+
+    <!-- Broken phone illustration -->
+    <div class="phone-wrap">
+      <svg width="130" height="220" viewBox="0 0 130 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="phoneBody" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0f1535"/>
+            <stop offset="100%" stop-color="#080b20"/>
+          </linearGradient>
+          <linearGradient id="screenBg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1a2050"/>
+            <stop offset="100%" stop-color="#080b20"/>
+          </linearGradient>
+          <linearGradient id="errorGlow" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ef4444"/>
+            <stop offset="100%" stop-color="#b91c1c"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Phone body -->
+        <rect x="5" y="5" width="120" height="210" rx="22"
+          fill="url(#phoneBody)" stroke="rgba(59,130,246,0.3)" stroke-width="1.5"/>
+
+        <!-- Screen area -->
+        <rect x="14" y="18" width="102" height="178" rx="14"
+          fill="url(#screenBg)"/>
+
+        <!-- Notch -->
+        <rect x="46" y="23" width="38" height="9" rx="4.5" fill="#07080f"/>
+
+        <!-- Screen crack lines -->
+        <path class="crack crack-1"
+          d="M45 50 L70 95 L55 130 L80 180"
+          stroke="#ef4444" stroke-width="1.5"
+          stroke-linecap="round" fill="none" opacity="0.8"/>
+        <path class="crack crack-2"
+          d="M70 95 L95 75 L110 100"
+          stroke="#ef4444" stroke-width="1"
+          stroke-linecap="round" fill="none" opacity="0.6"/>
+        <path class="crack crack-3"
+          d="M55 130 L30 120 L18 150"
+          stroke="#ef4444" stroke-width="1"
+          stroke-linecap="round" fill="none" opacity="0.5"/>
+
+        <!-- Error icon on screen -->
+        <circle cx="65" cy="95" r="22"
+          fill="rgba(239,68,68,0.12)"
+          stroke="rgba(239,68,68,0.4)" stroke-width="1"/>
+        <text x="65" y="102" text-anchor="middle"
+          font-size="22" fill="#ef4444" font-family="Arial">✕</text>
+
+        <!-- Small error text on screen -->
+        <rect x="26" y="128" width="78" height="8" rx="3"
+          fill="rgba(241,245,255,0.06)"/>
+        <rect x="34" y="142" width="62" height="6" rx="2"
+          fill="rgba(241,245,255,0.04)"/>
+        <rect x="40" y="154" width="50" height="6" rx="2"
+          fill="rgba(241,245,255,0.04)"/>
+
+        <!-- Bottom home indicator -->
+        <rect x="45" y="186" width="40" height="4" rx="2"
+          fill="rgba(241,245,255,0.12)"/>
+
+        <!-- Volume buttons -->
+        <rect x="0" y="65" width="4" height="20" rx="2"
+          fill="rgba(59,130,246,0.3)"/>
+        <rect x="0" y="90" width="4" height="14" rx="2"
+          fill="rgba(59,130,246,0.3)"/>
+
+        <!-- Power button -->
+        <rect x="126" y="75" width="4" height="24" rx="2"
+          fill="rgba(59,130,246,0.3)"/>
+
+        <!-- Screen shatter overlay -->
+        <path d="M45 50 L14 60 L14 80 L30 70 Z"
+          fill="rgba(239,68,68,0.05)"/>
+        <path d="M70 95 L95 75 L116 90 L90 110 Z"
+          fill="rgba(239,68,68,0.04)"/>
+        <path d="M55 130 L30 120 L14 140 L14 165 L40 155 Z"
+          fill="rgba(239,68,68,0.04)"/>
+      </svg>
+    </div>
+
+    <!-- 404 heading -->
+    <div class="error-code">404</div>
+
+    <div class="divider"></div>
+
+    <h1 class="error-title">Oops! Page not found.</h1>
+
+    <p class="error-sub">
+      Looks like this page went out of stock. 😅<br>
+      The page you're looking for doesn't exist or has been moved.
+    </p>
+
+    <!-- Auto redirect countdown -->
+    <div class="auto-redirect">
+      <span class="dot"></span>
+      Redirecting to home in <strong id="countdown" style="color:var(--white);margin:0 3px">10</strong> seconds
+    </div>
+
+    <!-- Progress bar -->
+    <div class="redirect-bar">
+      <div class="redirect-progress"></div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="btn-group">
+      <a href="https://techuniversehdb.in/" class="btn-primary">
+        <i class="bi bi-house-fill"></i> Back to Home
+      </a>
+      <a href="https://techuniversehdb.in/#mobiles" class="btn-outline">
+        <i class="bi bi-phone"></i> Browse Phones
+      </a>
+      <a href="https://wa.me/917074550550?text=Hi Tech Universe, I got a 404 error and need help."
+         target="_blank" class="btn-wa">
+        <i class="bi bi-whatsapp"></i> WhatsApp Us
+      </a>
+    </div>
+
+    <!-- Quick navigation links -->
+    <div class="quick-links">
+      <span class="ql-label">Quick Navigation</span>
+      <a href="https://techuniversehdb.in/#mobiles" class="quick-link">
+        <i class="bi bi-phone"></i> Mobiles
+      </a>
+      <a href="https://techuniversehdb.in/#brands" class="quick-link">
+        <i class="bi bi-grid"></i> Brands
+      </a>
+      <a href="https://techuniversehdb.in/#finance" class="quick-link">
+        <i class="bi bi-credit-card"></i> Finance
+      </a>
+      <a href="https://techuniversehdb.in/#blog" class="quick-link">
+        <i class="bi bi-newspaper"></i> Blog
+      </a>
+      <a href="https://techuniversehdb.in/#contact" class="quick-link">
+        <i class="bi bi-geo-alt"></i> Contact
+      </a>
+    </div>
+
+    <!-- Store info -->
+    <div class="store-bar">
+      <div class="store-item">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span><strong>Gosala Road,</strong> Haldibari — 735122</span>
+      </div>
+      <div class="store-item">
+        <i class="bi bi-telephone-fill"></i>
+        <a href="tel:+917074550550"
+           style="color:rgba(241,245,255,0.5);text-decoration:none">
+          <strong>+91-7074550550</strong>
+        </a>
+      </div>
+      <div class="store-item">
+        <i class="bi bi-clock-fill"></i>
+        <span>Open <strong>10AM–10PM</strong> (Fri closed)</span>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/917074550550?text=Hi%20Tech%20Universe%2C%20I%20have%20a%20query."
+     target="_blank" class="wa-fab" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script>
+    // Countdown & auto-redirect
+    let secs = 10;
+    const el = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      secs--;
+      if (el) el.textContent = secs;
+      if (secs <= 0) {
+        clearInterval(timer);
+        window.location.href = 'https://techuniversehdb.in/';
+      }
+    }, 1000);
+
+    // Floating particles
+    const container = document.getElementById('particles');
+    if (container) {
+      for (let i = 0; i < 25; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.cssText = `
+          left: ${Math.random() * 100}%;
+          bottom: ${Math.random() * 20}%;
+          width: ${Math.random() * 3 + 1}px;
+          height: ${Math.random() * 3 + 1}px;
+          animation-duration: ${Math.random() * 8 + 6}s;
+          animation-delay: ${Math.random() * 6}s;
+          opacity: ${Math.random() * 0.5};
+        `;
+        // Alternate colors
+        if (i % 3 === 0) p.style.background = '#F59E0B';
+        if (i % 5 === 0) p.style.background = '#ef4444';
+        container.appendChild(p);
+      }
+    }
+  </script>
+
+</body>
+</html>
