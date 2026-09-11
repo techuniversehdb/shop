@@ -1383,197 +1383,51 @@ Call Now
           </ol>
         </nav>
         <h1><i class="bi bi-phone me-2 text-blue"></i>Mobile Phones</h1>
-        <p class="text-muted-custom mt-1">30+ models across all budgets — from entry-level to flagship</p>
+        <p class="text-muted-custom mt-1" id="mobilesCountText">Loading live inventory…</p>
       </div>
     </div>
     <div class="section-pad">
       <div class="container">
 
-        <!-- Filter bar -->
+        <!-- Filter bar (live) -->
         <div class="bg-dark-card p-3 mb-5">
           <div class="row g-3 align-items-end">
+            <div class="col-12 col-md-4">
+              <label class="form-label">Search</label>
+              <input type="text" id="mSearch" class="form-control" placeholder="Search model or brand...">
+            </div>
             <div class="col-6 col-md-3">
               <label class="form-label">Brand</label>
-              <select class="form-select">
-                <option>All Brands</option>
-                <option>Samsung</option>
-                <option>Apple</option>
-                <option>Realme</option>
-                <option>Redmi</option>
-                <option>Vivo</option>
-                <option>OPPO</option>
-                <option>OnePlus</option>
-                <option>Motorola</option>
-                <option>Lava</option>
-                <option>iQOO</option>
+              <select id="mBrand" class="form-select">
+                <option value="All">All Brands</option>
               </select>
             </div>
             <div class="col-6 col-md-3">
               <label class="form-label">Budget</label>
-              <select class="form-select">
-                <option>Any Budget</option>
-                <option>Under ₹15,000</option>
-                <option>₹15,000 – ₹30,000</option>
-                <option>₹30,000 – ₹50,000</option>
-                <option>₹50,000 – ₹90,000</option>
-                <option>Above ₹90,000</option>
+              <select id="mBudget" class="form-select">
+                <option value="All">Any Budget</option>
+                <option value="0-15000">Under ₹15,000</option>
+                <option value="15000-35000">₹15,000 – ₹35,000</option>
+                <option value="35000-60000">₹35,000 – ₹60,000</option>
+                <option value="60000-999999999">Above ₹60,000</option>
               </select>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-2">
               <label class="form-label">Connectivity</label>
-              <select class="form-select">
-                <option>All</option>
-                <option>5G</option>
-                <option>4G</option>
+              <select id="mConn" class="form-select">
+                <option value="All">All</option>
+                <option value="5G">5G</option>
+                <option value="4G">4G</option>
               </select>
-            </div>
-            <div class="col-6 col-md-3">
-              <button class="btn btn-primary-custom w-100">Filter</button>
             </div>
           </div>
         </div>
 
-        <!-- Product Grid -->
-        <div class="row g-4">
-          <!-- Budget segment -->
-          <div class="col-12"><h5 class="text-blue fw-bold mb-2"><i class="bi bi-wallet2 me-2"></i>Budget Picks — Under ₹15,000</h5></div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🔵</div>
-              <div class="product-body">
-                <span class="product-brand">Redmi</span>
-                <div class="product-name">Redmi 15A 5G</div>
-                <div class="product-price">₹14,999</div>
-                <div class="product-emi">EMI from ₹1462/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🔴</div>
-              <div class="product-body">
-                <span class="product-brand">Redmi</span>
-                <div class="product-name">Redmi A7 Pro 4G</div>
-                <div class="product-price">₹12,499</div>
-                <div class="product-emi">EMI from ₹1000/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🟢</div>
-              <div class="product-body">
-                <span class="product-brand">Vivo</span>
-                <div class="product-name">Vivo Y05 4G</div>
-                <div class="product-price">₹12,999</div>
-                <div class="product-emi">EMI from ₹923/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🟡</div>
-              <div class="product-body">
-                <span class="product-brand">Samsung</span>
-                <div class="product-name">Galaxy A07 4G</div>
-                <div class="product-price">₹11,999</div>
-                <div class="product-emi">EMI from ₹893/mo</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mid-range -->
-          <div class="col-12 mt-3"><h5 class="text-blue fw-bold mb-2"><i class="bi bi-star me-2"></i>Mid-Range — ₹15,000 to ₹35,000</h5></div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🔵</div>
-              <div class="product-body">
-                <span class="product-brand">Redmi</span><span class="badge-new ms-2">5G</span>
-                <div class="product-name">Redmi Note 15 5G</div>
-                <div class="product-price">₹29,999</div>
-                <div class="product-emi">EMI from ₹2,108/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🔴</div>
-              <div class="product-body">
-                <span class="product-brand">Samsung</span><span class="badge-new ms-2">5G</span>
-                <div class="product-name">Galaxy A27 5G</div>
-                <div class="product-price">₹31,999</div>
-                <div class="product-emi">EMI from ₹2,909/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">⚡</div>
-              <div class="product-body">
-                <span class="product-brand">OPPO</span>
-                <div class="product-name">A6 Pro 5G</div>
-                <div class="product-price">₹28,999</div>
-                <div class="product-emi">EMI from ₹2,154/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🟢</div>
-              <div class="product-body">
-                <span class="product-brand">Vivo</span>
-                <div class="product-name">Vivo Y51 Pro 5G</div>
-                <div class="product-price">₹27,999</div>
-                <div class="product-emi">EMI from ₹2,292/mo</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flagship -->
-          <div class="col-12 mt-3"><h5 class="text-blue fw-bold mb-2"><i class="bi bi-trophy me-2"></i>Flagship — ₹40,000+</h5></div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🟡</div>
-              <div class="product-body">
-                <span class="product-brand">Samsung</span><span class="badge-hot ms-2">HOT</span>
-                <div class="product-name">Galaxy A57</div>
-                <div class="product-price">₹56,999</div>
-                <div class="product-emi">EMI from ₹3,693/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">🟢</div>
-              <div class="product-body">
-                <span class="product-brand">Vivo</span><span class="badge-hot ms-2">HOT</span>
-                <div class="product-name">X300 FE</div>
-                <div class="product-price">₹79,999</div>
-                <div class="product-emi">EMI from ₹5,074/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">⚡</div>
-              <div class="product-body">
-                <span class="product-brand">OPPO</span><span class="badge-new ms-2">NEW</span>
-                <div class="product-name">FIND X9</div>
-                <div class="product-price">₹84,999</div>
-                <div class="product-emi">EMI from ₹4,446/mo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="product-card">
-              <div class="product-img">⚡</div>
-              <div class="product-body">
-                <span class="product-brand">Xiaomi</span>
-                <div class="product-name">Xiaomi 17T</div>
-                <div class="product-price">₹59,999</div>
-                <div class="product-emi">EMI from ₹3,000/mo</div>
-              </div>
-            </div>
+        <!-- Product Grid — auto budget-segmented, live from inventory sheet -->
+        <div id="mobileContainer">
+          <div class="text-center py-5">
+            <div class="spinner-border" style="color:var(--blue-lt)" role="status"></div>
+            <p class="text-muted-custom mt-3">Loading live inventory…</p>
           </div>
         </div>
 
@@ -2199,6 +2053,9 @@ Call Now
   <!-- Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Live inventory feed (shared with /phones catalog) -->
+  <script src="phones/config.js"></script>
+
   <script>
     // ===== PAGE ROUTING =====
     function showPage(page) {
@@ -2249,6 +2106,164 @@ Call Now
         result.textContent = '—';
       }
     }
+
+    // ===== LIVE MOBILE CATALOG (Mobiles page) =====
+    // Auto-segments live inventory into budget tiers instead of hardcoded cards.
+    let allMobiles = [];
+    const mobileContainer  = document.getElementById('mobileContainer');
+    const mSearch          = document.getElementById('mSearch');
+    const mBrand           = document.getElementById('mBrand');
+    const mBudget          = document.getElementById('mBudget');
+    const mConn            = document.getElementById('mConn');
+    const mobilesCountText = document.getElementById('mobilesCountText');
+
+    // Budget tiers — adjust the min/max values here any time; segments
+    // with zero matching phones are simply skipped when rendering.
+    const BUDGET_SEGMENTS = [
+      { key: 'budget',   label: 'Budget Picks', icon: 'bi-wallet2', min: 0,     max: 15000    },
+      { key: 'mid',      label: 'Mid-Range',     icon: 'bi-star',    min: 15000, max: 35000    },
+      { key: 'premium',  label: 'Premium',       icon: 'bi-gem',     min: 35000, max: 60000    },
+      { key: 'flagship', label: 'Flagship',      icon: 'bi-trophy',  min: 60000, max: Infinity }
+    ];
+
+    function segmentFor(price) {
+      return BUDGET_SEGMENTS.find(s => price >= s.min && price < s.max)
+        || BUDGET_SEGMENTS[BUDGET_SEGMENTS.length - 1];
+    }
+
+    function segmentRangeLabel(seg) {
+      return seg.max === Infinity
+        ? `Above ₹${seg.min.toLocaleString('en-IN')}`
+        : `₹${seg.min.toLocaleString('en-IN')} – ₹${seg.max.toLocaleString('en-IN')}`;
+    }
+
+    function hashCode(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) hash = (hash << 5) - hash + str.charCodeAt(i);
+      return hash;
+    }
+
+    function emiFrom(price) {
+      // Indicative starting EMI over a 12-month tenure; exact plans vary by finance partner.
+      return Math.ceil(price / 12);
+    }
+
+    function isFiveG(phone) {
+      return /5g/i.test(phone.Model || '') || /5g/i.test(phone.Display || '');
+    }
+
+    async function loadMobileCatalog() {
+      if (!mobileContainer || typeof API_URL === 'undefined') return;
+      try {
+        const res = await fetch(API_URL);
+        allMobiles = await res.json();
+        populateBrandOptions();
+        renderMobiles();
+      } catch (err) {
+        console.error(err);
+        mobileContainer.innerHTML =
+          '<div class="alert alert-danger">Couldn\'t load live prices right now. Please WhatsApp us for the latest stock & pricing.</div>';
+        if (mobilesCountText) mobilesCountText.textContent = 'Live pricing is temporarily unavailable';
+      }
+    }
+
+    function populateBrandOptions() {
+      const brands = [...new Set(allMobiles.map(p => p.Brand).filter(Boolean))].sort();
+      mBrand.innerHTML = '<option value="All">All Brands</option>' +
+        brands.map(b => `<option>${b}</option>`).join('');
+    }
+
+    function phoneCardHTML(phone) {
+      const price = Number(phone.Price) || 0;
+      const emoji = ['🔵','🔴','🟢','🟡','⚡'][Math.abs(hashCode(phone.Brand || '')) % 5];
+      const fiveG = isFiveG(phone);
+      const available = (phone.Available || '').toLowerCase() === 'yes';
+      const fiveGBadge = fiveG ? '<span class="badge-new ms-2">5G</span>' : '';
+      const stockBadge = available ? '' : '<span class="badge-hot ms-2">Out of Stock</span>';
+      const imgTag = phone.Image
+        ? `<img src="${phone.Image}" alt="${phone.Brand || ''} ${phone.Model || ''}" style="max-width:100%;max-height:100%;object-fit:contain" onerror="this.replaceWith(document.createTextNode('${emoji}'))">`
+        : emoji;
+
+      return `
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="product-card">
+            <div class="product-img">${imgTag}</div>
+            <div class="product-body">
+              <span class="product-brand">${phone.Brand || ''}</span>${fiveGBadge}${stockBadge}
+              <div class="product-name">${phone.Model || ''}</div>
+              <div class="product-price">₹${price.toLocaleString('en-IN')}</div>
+              <div class="product-emi">EMI from ₹${emiFrom(price).toLocaleString('en-IN')}/mo</div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function renderMobiles() {
+      if (!mobileContainer) return;
+      let filtered = [...allMobiles];
+
+      const q = (mSearch.value || '').toLowerCase().trim();
+      if (q) {
+        filtered = filtered.filter(p => `${p.Brand} ${p.Model}`.toLowerCase().includes(q));
+      }
+
+      if (mBrand.value !== 'All') {
+        filtered = filtered.filter(p => p.Brand === mBrand.value);
+      }
+
+      if (mBudget.value !== 'All') {
+        const [min, max] = mBudget.value.split('-').map(Number);
+        filtered = filtered.filter(p => {
+          const price = Number(p.Price) || 0;
+          return price >= min && price < max;
+        });
+      }
+
+      if (mConn.value !== 'All') {
+        filtered = filtered.filter(p => mConn.value === '5G' ? isFiveG(p) : !isFiveG(p));
+      }
+
+      if (mobilesCountText) {
+        mobilesCountText.textContent = filtered.length
+          ? `${filtered.length} model${filtered.length > 1 ? 's' : ''} across all budgets — live pricing, updated automatically`
+          : 'No models match your filters right now';
+      }
+
+      if (!filtered.length) {
+        mobileContainer.innerHTML =
+          '<div class="alert alert-warning">No phones match your filters. Try clearing search or budget.</div>';
+        return;
+      }
+
+      // Auto-segment the filtered results into budget tiers
+      const grouped = {};
+      filtered.forEach(p => {
+        const seg = segmentFor(Number(p.Price) || 0);
+        (grouped[seg.key] = grouped[seg.key] || []).push(p);
+      });
+
+      let html = '';
+      BUDGET_SEGMENTS.forEach(seg => {
+        const items = grouped[seg.key];
+        if (!items || !items.length) return;
+        items.sort((a, b) => (Number(a.Price) || 0) - (Number(b.Price) || 0));
+        html += `
+          <div class="row g-4 mb-2">
+            <div class="col-12"><h5 class="text-blue fw-bold mb-2"><i class="bi ${seg.icon} me-2"></i>${seg.label} — ${segmentRangeLabel(seg)}</h5></div>
+            ${items.map(phoneCardHTML).join('')}
+          </div>`;
+      });
+
+      mobileContainer.innerHTML = html;
+    }
+
+    [mSearch, mBrand, mBudget, mConn].forEach(el => {
+      if (!el) return;
+      el.addEventListener('input', renderMobiles);
+      el.addEventListener('change', renderMobiles);
+    });
+
+    loadMobileCatalog();
   </script>
 </body>
 </html>
