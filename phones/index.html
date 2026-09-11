@@ -1,147 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Price List – Tech Universe, Haldibari</title>
+  <meta name="description" content="Live mobile phone price list at Tech Universe, Haldibari. Search, filter by brand, and sort by price across Samsung, Apple, Vivo, OPPO, Redmi, Realme, OnePlus & iQOO." />
+  <meta name="theme-color" content="#07080f">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" href="../favicon/favicon-32x32.png">
 
-    <title>Mobile Price List</title>
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== DESIGN TOKENS (matches main site) ===== */
+    :root {
+      --navy:    #0A0F2E;
+      --blue:    #2563EB;
+      --blue-lt: #3B82F6;
+      --amber:   #F59E0B;
+      --white:   #F8FAFF;
+      --slate:   #64748B;
+      --card-bg: #111827;
+      --border:  rgba(255,255,255,0.08);
+      --font-display: 'Poppins', sans-serif;
+      --font-body:    'Inter', sans-serif;
+    }
 
-    <meta name="theme-color" content="#0d6efd">
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-<link rel="manifest" href="manifest.json">
+    body {
+      font-family: var(--font-body);
+      background: #0d1321;
+      color: var(--white);
+      overflow-x: hidden;
+    }
 
-<link rel="apple-touch-icon" href="icons/icon-192.png">
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; }
+    a { text-decoration: none; }
 
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: rgba(10, 15, 46, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+    .navbar-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--white) !important;
+      letter-spacing: -0.5px;
+    }
+    .navbar-brand span { color: var(--amber); }
+    .nav-link {
+      color: rgba(248,250,255,0.78) !important;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.45rem 0.9rem !important;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--white) !important;
+      background: rgba(37,99,235,0.18);
+    }
+    .navbar-toggler { border-color: var(--border); }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(248,250,255,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      background: linear-gradient(135deg, #0A0F2E, #111827);
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 0;
+    }
+    .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .text-muted-custom { color: rgba(248,250,255,0.5) !important; }
+    .text-blue { color: var(--blue-lt) !important; }
+
+    .section-pad { padding: 3.5rem 0; }
+
+    /* ===== FILTER BAR ===== */
+    .bg-dark-card {
+      background: rgba(17,24,39,0.7);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    .form-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(248,250,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 0.4rem;
+    }
+    .form-control, .form-select {
+      background: rgba(17,24,39,0.8) !important;
+      border: 1px solid var(--border) !important;
+      color: var(--white) !important;
+      border-radius: 10px !important;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+    }
+    .form-control::placeholder { color: rgba(248,250,255,0.4); }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--blue) !important;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.25) !important;
+    }
+    .form-select option { background: #111827; }
+
+    /* ===== PRODUCT CARDS (dynamic, matches main site's .product-card) ===== */
+    .mobile-card {
+      background: rgba(17,24,39,0.8);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s;
+      height: 100%;
+    }
+    .mobile-card:hover {
+      border-color: rgba(37,99,235,0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(37,99,235,0.2);
+    }
+    .mobile-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: linear-gradient(135deg, #111827, #1e2a45);
+      padding: 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-card .card-body { padding: 1.3rem; }
+    .price {
+      font-family: var(--font-display);
+      color: var(--amber);
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+    .spec {
+      font-size: 0.83rem;
+      color: rgba(248,250,255,0.6);
+      margin-bottom: 0.4rem;
+    }
+    .spec strong { color: rgba(248,250,255,0.85); }
+    .stock { font-size: 0.72rem; font-weight: 700; border-radius: 6px; }
+
+    .loading {
+      text-align: center;
+      padding: 4rem 1rem;
+      font-size: 1.1rem;
+      color: rgba(248,250,255,0.5);
+      font-family: var(--font-display);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #060a1a;
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 0 1.5rem;
+    }
+    .footer-brand { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--white); }
+    .footer-brand span { color: var(--amber); }
+    .footer-tagline { font-size: 0.85rem; color: var(--slate); margin-top: 0.4rem; }
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(248,250,255,0.5);
+      margin-bottom: 1rem;
+    }
+    .footer-link { display: block; color: rgba(248,250,255,0.6); font-size: 0.88rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+    .footer-link:hover { color: var(--blue-lt); }
+    .social-btn {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(248,250,255,0.6);
+      font-size: 1rem;
+      transition: all 0.22s;
+    }
+    .social-btn:hover { background: var(--blue); border-color: var(--blue); color: #fff; transform: translateY(-2px); }
+    .footer-bottom { border-top: 1px solid var(--border); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.82rem; color: var(--slate); }
+
+    /* ===== WHATSAPP FAB ===== */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 1.8rem;
+      right: 1.5rem;
+      z-index: 9999;
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.65rem;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      transition: all 0.25s;
+      animation: wa-bounce 2.5s ease-in-out infinite;
+    }
+    .whatsapp-fab:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.6); color: #fff; }
+    @keyframes wa-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-card img { height: 170px; }
+      .price { font-size: 1.1rem; }
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- Navbar -->
+  <!-- ========== NAVBAR (same as main site) ========== -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/">Tech<span>Universe</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="/"><i class="bi bi-house me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./"><i class="bi bi-phone me-1"></i>Mobiles</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#brands"><i class="bi bi-grid me-1"></i>Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#finance"><i class="bi bi-credit-card me-1"></i>Finance</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#blog"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#contact"><i class="bi bi-geo-alt me-1"></i>Contact</a></li>
+        </ul>
+        <a href="https://wa.me/917074550550" target="_blank" rel="noopener noreferrer" class="btn btn-sm ms-3 d-flex align-items-center gap-1"
+           style="background:#25D366;color:#fff;border-radius:8px;font-weight:600;padding:0.42rem 0.9rem;font-size:0.83rem;">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="navbar navbar-dark bg-primary shadow">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                📱 My Mobile Shop
-            </a>
-        </div>
-    </nav>
+  <!-- ========== PAGE HEADER ========== -->
+  <div class="page-header">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="/" style="color:var(--blue-lt)">Home</a></li>
+          <li class="breadcrumb-item active" style="color:var(--slate)">Mobiles</li>
+        </ol>
+      </nav>
+      <h1><i class="bi bi-phone me-2 text-blue"></i>Live Mobile Price List</h1>
+      <p class="text-muted-custom mt-1">Search, filter by brand, and sort by price — updated live from our inventory sheet</p>
+    </div>
+  </div>
 
+  <div class="section-pad">
+    <div class="container">
 
-    <!-- Hero -->
-
-    <section class="bg-light py-5">
-
-        <div class="container text-center">
-
-            <h1 class="fw-bold">
-                Latest Mobile Prices
-            </h1>
-
-            <p class="text-muted">
-                Samsung • Oppo • Vivo • Redmi
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Search -->
-
-    <div class="container my-4">
-
+      <!-- Filter bar -->
+      <div class="bg-dark-card p-3 mb-5">
         <div class="row g-3">
-
-            <div class="col-md-6">
-
-                <input
-                    type="text"
-                    id="searchBox"
-                    class="form-control"
-                    placeholder="Search mobile...">
-
-            </div>
-
-            <div class="col-md-3">
-
-                <select id="brandFilter" class="form-select">
-
-                    <option value="All">All Brands</option>
-
-                    <option>Samsung</option>
-
-                    <option>Oppo</option>
-
-                    <option>Vivo</option>
-
-                    <option>Redmi</option>
-
-                </select>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <select id="sortPrice" class="form-select">
-
-                    <option value="">Sort Price</option>
-
-                    <option value="low">Low to High</option>
-
-                    <option value="high">High to Low</option>
-
-                </select>
-
-            </div>
-
+          <div class="col-md-6">
+            <label class="form-label">Search</label>
+            <input type="text" id="searchBox" class="form-control" placeholder="Search mobile...">
+          </div>
+          <div class="col-6 col-md-3">
+            <label class="form-label">Brand</label>
+            <select id="brandFilter" class="form-select">
+              <option value="All">All Brands</option>
+              <option>Samsung</option>
+              <option>Oppo</option>
+              <option>Vivo</option>
+              <option>Redmi</option>
+            </select>
+          </div>
+          <div class="col-6 col-md-3">
+            <label class="form-label">Sort by Price</label>
+            <select id="sortPrice" class="form-select">
+              <option value="">Sort Price</option>
+              <option value="low">Low to High</option>
+              <option value="high">High to Low</option>
+            </select>
+          </div>
         </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="row" id="mobileContainer">
+        <!-- Cards injected by app.js -->
+      </div>
 
     </div>
+  </div>
 
-
-    <!-- Cards -->
-
-    <div class="container mb-5">
-
-        <div class="row" id="mobileContainer">
-
-            <!-- Cards from app.js -->
-
+  <!-- ========== FOOTER (same as main site) ========== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <div class="footer-brand">Tech<span>Universe</span></div>
+          <div class="footer-tagline">Haldibari's trusted mobile phone store.</div>
+          <p style="color:rgba(248,250,255,0.45);font-size:0.83rem;margin-top:0.8rem;line-height:1.7">
+            Genuine phones, flexible EMI, and after-sales support — all in one place. Serving Haldibari, Cooch Behar, Mekhliganj & beyond since 2025.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://www.facebook.com/techuniversehdb" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/techuniversehdb" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+            <a href="https://wa.me/917074550550" target="_blank" class="social-btn" style="background:#25D366;border-color:#25D366;color:#fff;"><i class="bi bi-whatsapp"></i></a>
+          </div>
         </div>
-
+        <div class="col-6 col-sm-3 col-lg-2">
+          <div class="footer-title">Quick Links</div>
+          <a href="/" class="footer-link">Home</a>
+          <a href="./" class="footer-link">Mobiles</a>
+          <a href="/#brands" class="footer-link">Brands</a>
+          <a href="/#finance" class="footer-link">Finance / EMI</a>
+          <a href="/#blog" class="footer-link">Blog</a>
+          <a href="/#contact" class="footer-link">Contact</a>
+        </div>
+        <div class="col-6 col-sm-3 col-lg-2">
+          <div class="footer-title">Brands</div>
+          <span class="footer-link" style="cursor:default">Samsung</span>
+          <span class="footer-link" style="cursor:default">Apple</span>
+          <span class="footer-link" style="cursor:default">Realme</span>
+          <span class="footer-link" style="cursor:default">Redmi</span>
+          <span class="footer-link" style="cursor:default">Vivo</span>
+          <span class="footer-link" style="cursor:default">OPPO</span>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="footer-title">Store Info</div>
+          <div style="color:rgba(248,250,255,0.5);font-size:0.85rem;line-height:2">
+            <p class="mb-1"><i class="bi bi-geo-alt me-2 text-blue"></i>Gosala Road, Haldibari, Cooch Behar, WB — 735122</p>
+            <p class="mb-1"><i class="bi bi-telephone me-2 text-blue"></i>+91-7074-550-550</p>
+            <p class="mb-1"><i class="bi bi-envelope me-2 text-blue"></i>info@techuniversehdb.in</p>
+            <p class="mb-1"><i class="bi bi-clock me-2 text-blue"></i>Mon–Thu, Sat–Sun: 10:00 AM – 10:00 PM Closed every Friday</p>
+          </div>
+          <div class="mt-3">
+            <a href="https://wa.me/917074550550" target="_blank"
+               class="btn btn-sm d-inline-flex align-items-center gap-2"
+               style="background:#25D366;color:#fff;border-radius:8px;font-weight:600;font-size:0.82rem;padding:0.45rem 1rem;">
+              <i class="bi bi-whatsapp"></i> WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+        <span>© 2025 Tech Universe, Haldibari. All rights reserved.</span>
+        <span>Made with ❤️ for Haldibari · <a href="#" style="color:var(--blue-lt);">Privacy Policy</a></span>
+      </div>
     </div>
+  </footer>
 
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/917074550550?text=Hi%20Tech%20Universe%2C%20I%20have%20a%20query%20about%20a%20phone."
+     target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
 
-    <!-- Footer -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
-    <footer class="bg-dark text-white text-center p-3">
-
-        © 2026 My Mobile Shop
-
-    </footer>
-
-
-    <script src="config.js"></script>
-
-    <script src="app.js"></script>
-
-    <script>
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
         navigator.serviceWorker
-            .register("./sw.js")
-            .then(() => console.log("Service Worker Registered"))
-            .catch(err => console.log(err));
-    });
-}
-</script>
+          .register("./sw.js")
+          .then(() => console.log("Service Worker Registered"))
+          .catch(err => console.log(err));
+      });
+    }
+  </script>
 
 </body>
-
 </html>
