@@ -495,6 +495,16 @@
       color: #0A0F2E;
     }
 
+    /* ===== REVIEW CARDS ===== */
+    .review-card {
+      background: rgba(17,24,39,0.8);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      height: 100%;
+    }
+    .review-stars { color: var(--amber); letter-spacing: 2px; }
+
     /* Phone mockup + pulse rings */
     .phone-mockup-wrap {
       position: relative;
@@ -1354,6 +1364,39 @@ Tech Universe – Mobile Phone & Accessories Store in Haldibari<br><br>
       </div>
     </div>
 
+    <!-- Social Proof: Reviews + Social Posts (spreadsheet-driven) -->
+    <div class="section-pad">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-eyebrow">Social Proof</span>
+          <h2 class="section-title">What People Are Saying</h2>
+        </div>
+
+        <!-- Google Reviews -->
+        <div class="row g-4 mb-5" id="reviewsContainer">
+          <div class="col-12 text-center py-3">
+            <div class="spinner-border" style="color:var(--blue-lt)" role="status"></div>
+          </div>
+        </div>
+
+        <!-- Tweets + Instagram posts -->
+        <div class="row g-4 justify-content-center" id="socialPostsContainer">
+          <div class="col-12 text-center py-3">
+            <div class="spinner-border" style="color:var(--blue-lt)" role="status"></div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="https://twitter.com/techuniversehdb" target="_blank" class="btn btn-outline-custom btn-sm me-2">
+            <i class="bi bi-twitter-x me-1"></i>Follow on X
+          </a>
+          <a href="https://www.instagram.com/techuniversehdb" target="_blank" class="btn btn-outline-custom btn-sm">
+            <i class="bi bi-instagram me-1"></i>Follow on Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- CTA Banner -->
     <div class="section-pad">
       <div class="container">
@@ -2064,6 +2107,11 @@ Tech Universe – Mobile Phone & Accessories Store in Haldibari<br><br>
   <script src="phones/config.js"></script>
   <!-- Live FAQ feed -->
   <script src="faq-config.js"></script>
+  <!-- Live Social feed (tweets, instagram posts, reviews) -->
+  <script src="social-config.js"></script>
+  <!-- X / Instagram embed widget scripts (render the live posts referenced from the sheet) -->
+  <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
 
   <script>
     // ===== PAGE ROUTING =====
@@ -2365,6 +2413,85 @@ Tech Universe – Mobile Phone & Accessories Store in Haldibari<br><br>
     }
 
     loadFAQs();
+
+    // ===== LIVE SOCIAL PROOF (Reviews + Tweets + Instagram posts) =====
+    // All three are driven by the "Social" sheet — editing a row updates the
+    // site with no code changes. Tweets/Instagram just store a post URL and
+    // are rendered using X's / Instagram's own official embed widgets.
+    function whenReady(check, cb, tries = 20) {
+      if (check()) return cb();
+      if (tries <= 0) return; // widget script never loaded — leave as-is, no crash
+      setTimeout(() => whenReady(check, cb, tries - 1), 250);
+    }
+
+    function starsHTML(rating) {
+      const r = Math.max(0, Math.min(5, Math.round(Number(rating) || 0)));
+      return '★'.repeat(r) + '☆'.repeat(5 - r);
+    }
+
+    function renderReviews(reviews) {
+      const container = document.getElementById('reviewsContainer');
+      if (!container) return;
+      if (!reviews.length) {
+        container.innerHTML = '';
+        return;
+      }
+      container.innerHTML = reviews.slice(0, 3).map(r => `
+        <div class="col-md-4">
+          <div class="review-card">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <strong>${r.Name || 'Google User'}</strong>
+              <span class="review-stars">${starsHTML(r.Rating)}</span>
+            </div>
+            <p class="text-muted-custom mb-0" style="font-size:0.9rem;">"${r.Review || ''}"</p>
+          </div>
+        </div>`).join('');
+    }
+
+    function renderSocialPosts(tweets, instagramPosts) {
+      const container = document.getElementById('socialPostsContainer');
+      if (!container) return;
+
+      let html = '';
+      (tweets || []).slice(0, 2).forEach(t => {
+        if (!t.TweetURL) return;
+        html += `
+          <div class="col-sm-6 col-lg-3">
+            <blockquote class="twitter-tweet" data-theme="dark"><a href="${t.TweetURL}"></a></blockquote>
+          </div>`;
+      });
+      (instagramPosts || []).slice(0, 2).forEach(p => {
+        if (!p.PostURL) return;
+        html += `
+          <div class="col-sm-6 col-lg-3">
+            <blockquote class="instagram-media" data-instgrm-permalink="${p.PostURL}" data-instgrm-version="14" style="margin:0 auto;"></blockquote>
+          </div>`;
+      });
+
+      container.innerHTML = html || '<div class="col-12 text-center text-muted-custom">Follow us on social for the latest updates.</div>';
+
+      // Ask the widget scripts to render the blockquotes we just inserted
+      whenReady(() => window.twttr && window.twttr.widgets, () => window.twttr.widgets.load(container));
+      whenReady(() => window.instgrm && window.instgrm.Embeds, () => window.instgrm.Embeds.process());
+    }
+
+    async function loadSocialContent() {
+      if (typeof SOCIAL_API_URL === 'undefined' || SOCIAL_API_URL.includes('PASTE_YOUR')) return;
+      try {
+        const res = await fetch(SOCIAL_API_URL);
+        const data = await res.json();
+        renderReviews(data.reviews || []);
+        renderSocialPosts(data.tweets || [], data.instagram || []);
+      } catch (err) {
+        console.error('Social content load failed:', err);
+        const reviewsEl = document.getElementById('reviewsContainer');
+        const postsEl = document.getElementById('socialPostsContainer');
+        if (reviewsEl) reviewsEl.innerHTML = '';
+        if (postsEl) postsEl.innerHTML = '';
+      }
+    }
+
+    loadSocialContent();
   </script>
 </body>
 </html>
